@@ -1,0 +1,9 @@
+<h1>Testing</h1>
+{{#if model}}
+{{#each model as |item|}}
+{{input value=item.test}} Parent: {{item.parent.test}}<br/>
+{{/each}}
+<button {{action "saveAll"}}>Save all</button>
+{{else}}
+<button {{action "fill"}}>Fill database</button>
+{{/if}}
